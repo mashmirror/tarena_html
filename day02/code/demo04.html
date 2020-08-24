@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css选择器</title>
+    <style>
+        /* 清除h1默认距离 */
+        h1{
+            margin: 0px;
+        }
+        ul,ol{
+            margin: 0px;
+            padding: 0px;
+        }
+        /* ul直接子元素li ,只找一级*/
+        ul>li{
+            color:red;
+            text-align: center;
+        }
+        /* body中的后代元素li */
+        body li{
+            font-size: 30px;
+            text-align: center;
+        }
+        a:hover{
+            color: red;
+        }
+    </style>
+</head>
+<body>
+        <h1>群组选择器</h1>
+        <ul>
+            <li>item1</li>
+            <li>item2</li>
+            <li>item3</li>
+        </ul>
+        <ol>
+            <li>teacher ma</li>
+            <li>pdd</li>
+            <li>lbwnp</li>
+        </ol>
+        <a href="http://www.tmooc.cn/" >达内</a>
+</body>
+</html>

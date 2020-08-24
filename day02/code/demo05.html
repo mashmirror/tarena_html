@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>伪类选择器</title>
+    <style>
+        div{
+            width: 200px;
+            height: 300px;
+            background-color: red;
+            transition: all 10s;
+            /*
+            过渡属性 当样式改变时 变化的内容不会马上改变
+            而是在规定的时间内完成变化 
+             */
+             /* 发生变化的样式,all 全部 *
+                    发生变化的时间 单位s
+             */
+        }
+        div:hover{
+            background-color: blue;
+            width:1200px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div>
+
+    </div>
+</body>
+</html>
