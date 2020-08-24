@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>table标签</title>
+</head>
+
+<body>
+    <!-- table>tr*4>td*3 -->
+    <table border="1px" cellspacing="0">
+        <tr>
+            <!-- 跨列  横向合并单元格 -->
+            <!-- 删除同行的多余的单元格 -->
+            <td colspan="3">11</td>
+            <!-- <td>12</td>
+            <td>13</td> -->
+        </tr>
+        <!-- 合并 21 31 41 -->
+        <tr>
+            <!-- 跨行 纵向合并 -->
+            <!-- 删除其他行的对应位置的单元格 -->
+            <td rowspan="3">21</td>
+            <td>laowang</td>
+            <td>23</td>
+        </tr>
+        <tr>
+            <!-- <td>31</td> -->
+            <td>32</td>
+            <td>33</td>
+        </tr>
+        <tr>
+            <!-- <td>41</td> -->
+            <td>42</td>
+            <td>43</td>
+        </tr>
+    </table>
+
+    <!-- 15:51~16:05 -->
+    <table>
+        <thead>
+            <tr>
+                <th>姓名</th>
+                <th>年龄</th>
+                <th>班级</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>qtx</td>
+                <td>18</td>
+                <td>隔壁</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+
+</html>

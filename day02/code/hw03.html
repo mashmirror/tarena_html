@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+        <h1>增加管理员</h1>
+        <table>
+            <tr>
+                <td><label for="uname">姓名:</label></td>
+                <td><input type="text" id = "uname" maxlength="10"></td>
+                <td>十个字符以内</td>
+            </tr>
+            <tr>
+                <td><label for="upwd">密码:</label></td>
+                <td><input type="password" id = "upwd" maxlength="10"></td>
+                <td>十个字符以内</td>
+            </tr>
+            <tr>
+                <td>性别:</td>
+                <td>
+                    <input type="radio" name="sex" checked=True>男士
+                    <input type="radio"  name="sex">女士
+                </td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>角色</td>
+                <td>
+                    <input type="checkbox"> 超级管理员
+                    <br>
+                    <input type="checkbox">账单管理员
+                </td>
+                <td>
+                    至少选择一个角色
+                </td>
+            </tr>
+            <tr>
+                <td>头像</td>
+                <td><input type="file"></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>
+                    <input type="submit" value="保存">
+                    <input type="reset" value="重置">
+                </td>
+                <td></td>
+            </tr>
+        </table>
+</body>
+</html>
