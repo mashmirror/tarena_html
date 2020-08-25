@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>float浮动</title>
+    <style>
+        .d1 {
+            width: 200px;
+            height: 200px;
+            background-color: red;
+            float: left;
+        }
+
+        .d2 {
+            width: 200px;
+            height: 200px;
+            background-color: greenyellow;
+            float: left;
+        }
+
+        .d3 {
+            width: 200px;
+            height: 200px;
+            background-color: blue;
+            float: left;
+        }
+
+        /* div{
+            float: right;
+        } */
+        span {
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+            float: left;
+        }
+        #parent{
+            /* height: 200px; */
+            /* overflow: hidden; */
+            border: 5px solid orangered;
+        }
+        .clear{
+            clear: both;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 14:54~15:10 -->
+    <div id="parent">
+        <div class="d1"></div>
+        <div class="d2"></div>
+        <div class="d3"></div>
+        <span></span>
+        <div class="clear"></div>
+    </div>
+
+</body>
+
+</html>
