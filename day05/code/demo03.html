@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>func</title>
+</head>
+<body>
+    <input id="key" type="text">
+    <input id ="btn" type='submit'>
+    <br>
+    <textarea  id="content" cols="30" rows="10"></textarea>
+    <script>
+        var btn = document.getElementById('btn')
+        var key = document .getElementById('key')
+        var content = document.getElementById('content')
+        btn.onclick = function(){
+            content.innerText = key.value
+        }
+    </script>
+</body>
+</html>
