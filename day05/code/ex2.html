@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        td{
+            display:inline-block;
+            margin: 10px 15px;
+            align-content: center;
+        }
+        .first{
+            color: grey;
+        }
+        .select:hover{
+            cursor: pointer;
+            background-color: red;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <tr>
+            <td class="first">难度:</td>
+            <td class="select">全部</td>
+            <td class="select">初级</td>
+            <td class="select">中级</td>
+            <td class="select">高级</td>
+        </tr>
+    </table>
+    <script>
+        var  lis = document.getElementsByTagName('td')
+        console.log(lis[0].textContent)
+        var items = document.getElementsByClassName('select')
+        for (var i =0;i<4;i++){
+            items[i].onclick = function(){
+                alert('hello')
+            }
+        }
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>水仙花数</title>
+</head>
+<body>
+    <script>
+        var  i = parseInt(prompt('请输一个三位数'))
+        y = i
+        b =Math.floor( i/100)
+        i = i %100
+        s = Math.floor( i/10)
+        i =  i%10
+        g = i
+        if (y == g**3+s**3+b**3){
+            alert('是水仙花数')
+        }else{
+            alert('不是水仙花数')
+        }
+    </script>
+</body>
+</html>

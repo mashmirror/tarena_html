@@ -9,26 +9,26 @@
 </head>
 
 <body>
-    <button onclick="
+    <!-- <button onclick="
         var target = prompt('请输入一个值');
         isNaN(target)?console.log('不是数字'):console.log('是数字');"
     >
         检测数字
-    </button>
+    </button> -->
 
 
     <script>
         var a = 10;
         var b = 20;
         // a>b?如果a>b打印a 否则打印b
-        a > b ? console.log(a) : console.log(b);
+        // a > b ? console.log(a) : console.log(b);
         // 接受一个用户的输入的年份
         // 在控制台打印是否为闰年
-        // var year = prompt('请输入年份');
+        var year = prompt('请输入年份');
 
-        // var res = year % 4 == 0 && year % 100 !=0 || year % 400 == 0;
+        var res = year % 4 == 0 && year % 100 !=0 || year % 400 == 0;
 
-        // res?console.log('是闰年'):console.log('不是闰年');
+        res?console.log('是闰年'):console.log('不是闰年');
 
 
         // 接收一个用户输入的值 在控制台打印是否是数字 isNaN()
@@ -56,11 +56,11 @@
     </script>
 
     <script>
-        // var age = prompt('请输入年龄');
-        // console.log(`十年之后${Number(age)+10}`);
-        // console.log(`十年之前${age-10}`);
+        var age = prompt('请输入年龄');
+        console.log(`十年之后${Number(age)+10}`);
+        console.log(`十年之前${age-10}`);
 
-        // console.log(1+true);
+        console.log(1+true);
 
         // 16:02~16:17
         // var a = 0;
