@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        #topic{
+            width: 240px;
+            height: 132px;
+            border: 1px solid red;
+            position: relative;
+        }
+        #topic span{
+            position: absolute;
+            bottom: 0;
+            display: block;
+            color: #fff;
+            background-color: rgba(255, 0, 0, 0.5);
+            font-size: 14px;
+            padding: 2px 0 2px 10px;
+            width: 100%;
+            /* box-sizing: content-box; */
+            /* 元素实际所占大小 = width/height+padding+border+margin */
+            /* 10:10~10:25 */
+            box-sizing: border-box;
+            /* 元素实际所占大小 = width/height+margin */
+            /* 对元素内容/内边距/边框大小的调整会由浏览器自动计算,一个值发生变化后会自动调整其他的值 */
+            
+        }
+    </style>
+</head>
+<body>
+    <div id="topic">
+        <img src="../imgs/img02.png" alt="">
+        <span>三星再现关闭手机工厂风波</span>
+    </div>
+</body>
+</html>

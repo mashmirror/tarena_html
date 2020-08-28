@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>JS使用</title>
+    <style>
+        /* css代码 */
+    </style>
+    <link rel="stylesheet" href="">
+    <script>
+        // js代码
+        console.log('写在head中的代码')
+    </script>
+</head>
+
+<body>
+    <button onclick="alert('hello world')">
+        click me
+    </button>
+
+    <script src="demo1.js">
+        // console.log('外部JS文件加载成功')
+    </script>
+    <script>
+        console.log('写在文件末尾的代码');
+    </script>
+
+    <!-- <script src="demo1.js">
+        console.log('写在文件末尾的代码')
+    </script> -->
+</body>
+
+</html>
