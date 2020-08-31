@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        ul,
+        body {
+            /* 清除小圆点 */
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        li {
+            /* 让块元素水平排列 浮动 */
+            float: left;
+        }
+
+        .first {
+            color: #666;
+            margin: 10px;
+        }
+
+        .item {
+            /* display: none; */
+            /* 调整元素和其他元素的距离 外边距 */
+            margin: 10px 15px;
+            /* 调整内容和边框的距离 内边距 */
+            padding: 0 5px;
+        }
+
+        .active {
+            background-color: red;
+            color: #fff;
+        }
+
+        /* 鼠标移动到li中变成红底白字 */
+        .item:hover {
+            background-color: red;
+            color: #fff;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <ul>
+        <li class="first">难度:</li>
+        <li class="item ">全部</li>
+        <li class="item">初级</li>
+        <li class="item ">中级</li>
+        <li class="item active">高级</li>
+    </ul>
+    <script>
+        // day03 exercise1.html
+        // 通过标签名查找页面元素
+        // var lis = document.getElementsByTagName('li');//页面元素的节点列表
+        //通过索引获取页面元素对象
+        // console.log(lis[0]);
+        // 休息16:09~16:25
+
+
+        // 通过类名查找元素 找到所有.item的元素
+        var items = document.getElementsByClassName('item');
+        // 为所有的.item的元素添加一个鼠标单击效果
+        // 单击弹框显示hello world
+        console.log(items);
+        // items[0].onclick = function(){
+        //     alert('hello world');
+        // }
+        // items[1].onclick = function(){
+        //     alert('hello world');
+        // }
+        // items[2].onclick = function(){
+        //     alert('hello world');
+        // }
+        // items[3].onclick = function(){
+        //     alert('hello world');
+        // }
+
+
+        // def fun(i):
+        //     def inner():
+        //         print(i)
+        //     return inner
+
+        // var inner = fun(10)
+        // var inner = fun(100)
+        // inner()
+
+        // for (var i = 0; i < 4; i++) {
+        //     items[i].onclick = function (i_inner) {
+        //         return function(){
+        //             console.log(i_inner)
+        //         }
+        //     }(i)
+        // }
+
+        // for (let i = 0; i < 4; i++) {
+        //     items[i].onclick = function () {
+        //         console.log(items[i].innerHTML)
+        //     }
+        // }
+
+        // for (var i = 0; i < 4; i++) {
+        //     items[i].onclick = function () {
+        //         // this 表示调用方法的当前对象
+        //         console.log(this.innerHTML+'的内容')
+        //     }
+        // }
+
+        // 09:50~10:05
+        // 实现切换样式类操作
+        // 如 点击全部 为全部添加class active 清除其余的class active
+        for (var i = 0; i < 4; i++) {
+            items[i].onclick = function () {
+                // 先初始化样式
+                init(items);
+                // 为当前的页面元素对象添加样式类
+                this.setAttribute('class','active item');
+            }
+        }
+
+        // 初始化所有item的样式
+        function init(ele){
+            // ele 表示要被遍历的元素节点列表
+            // ele.length表示节点列表中元素的数量
+            for(var i=0;i<ele.length;i++){
+                ele[i].setAttribute('class','item')
+            }
+        }
+    </script>
+</body>
+
+</html>

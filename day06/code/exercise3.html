@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <img src="../imgs/bk0-8.jpg" alt="">
+        <img src="../imgs/bk1-8.jpg" alt="">
+        <img src="../imgs/bk2-8.jpg" alt="">
+        <img src="../imgs/bk3-8.jpg" alt="">
+    </div>
+    <script>
+        var imgs = document.getElementsByTagName('img');
+        // imgs[0].setAttribute('src','../imgs/bk3-8.jpg')
+        // 遍历imgs 修改每一个图片的scr属性
+        // 属性值为 getImgArr()中返回的数组中对应索引值的路径
+        for(var i=0;i<imgs.length;i++){
+            var arr = getImgArr();
+            imgs[i].src = arr[i];
+        }
+
+
+
+
+
+        // 随机显示4张图片
+        // 生成4个0~9之间的随机数
+        // Math.floor(Math.random()*(n+1))
+        // 使用随机数生成图片路径
+        // 1  --> ../imgs/bk1-8.jpg
+        // 5  --> ../imgs/bk5-8.jpg
+        function getImgUrl(num){
+            return `../imgs/bk${num}-8.jpg`
+        }
+        // 17:15~17:30
+        function getImgArr(){
+            var arr = [];//保存结果
+            for (var i=0;i<4;i++){
+                var num = parseInt(Math.random()*10);
+                // 求路径 添加到数组
+                arr.push(getImgUrl(num));
+            }
+            return arr;
+        }
+        console.log(getImgArr());
+    </script>
+</body>
+</html>

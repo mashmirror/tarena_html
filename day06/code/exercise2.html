@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    邮箱: <input id="key" type="text">
+    <button id="btn">解析</button>
+    <h1 id="show">...</h1>
+
+    <script>
+        // 14:58~15:15
+        // console.log(key);
+        var key = document.getElementById('key');
+        var btn = document.getElementById('btn');
+        var show = document.getElementById('show')
+        btn.onclick = function () {
+            var str = key.value;
+            var arr = str.split('@');
+            show.innerHTML = `用户名${arr[0]}服务商${arr[1]}`;
+        }
+
+
+        // btn.onclick = function () {
+        //     var str = key.value;
+        //     var i = str.indexOf('@');
+        //     show.innerHTML = `用户名${str.substring(0, i)}服务商${str.substring(i + 1)}`;
+        // }
+
+        // 用户输入邮箱后 点击解析按钮
+        // 在h1中显示解析后的用户名和服务商
+        // shibw@tedu.cn
+        //      5
+        // 用户名shibw 服务商tedu.cn
+        // var str = 'shibw@tedu.cn';
+        // // indexOf substring substr
+        // var i = str.indexOf('@');
+        // console.log(`用户名${str.substring(0, i)}服务商${str.substring(i + 1)}`)
+    </script>
+</body>
+
+</html>

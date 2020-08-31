@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>自定义对象</title>
+</head>
+<body>
+    <script>
+        // JSON
+        var obj = {
+            "uname":"qtx",
+            "age":18
+        };
+        // 对象.属性取值
+        console.log(obj.uname);
+        // 遍历对象
+        for(var o in obj){
+            console.log(o);//string
+            // 对象[索引]
+            console.log(obj[o]);
+        }
+
+
+
+
+
+
+        //python
+        // def __init__(self,color):
+        //      self.color = color
+        // 自定义构造函数 JS 
+        function Dog(color){
+            this.color = color
+        }
+        // 为自定义对象添加行为
+        Dog.prototype.say = function(){
+            console.log('汪汪汪');
+        }
+
+        var dog1 = new Dog('yellow');
+        console.log(dog1.color)
+        dog1.say()
+
+
+    </script>
+</body>
+</html>

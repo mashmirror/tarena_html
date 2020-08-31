@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>日期时间对象</title>
+</head>
+<body>
+    <script>
+        var now = new Date();
+        console.log(now);
+        // 获取
+        now.getFullYear();
+        now.getMonth()+1;//0~11
+        now.getDate();//日期
+        now.getDay();//星期
+        now.getHours();
+        now.getMinutes();
+        now.getSeconds();
+        // 设置
+        // now.setFullYear('2000');
+        // var y = new Date('2020/01/01 12:00:00');
+        // 1s = 1000ms;
+        console.log(now.getTime());
+
+        var end = new Date('2020/08/29 18:00:00');
+        console.log(end-now);
+        var leftTime = parseInt((end-now)/1000);
+        console.log(leftTime);
+    </script>
+</body>
+</html>
