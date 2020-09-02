@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        div{
+            width: 122px;
+            position: fixed;
+            right: 0;
+            top:50%;
+            margin-top:-150px;
+            transition: all 1s;
+        }
+    </style>
+</head>
+<body>
+    <div id="banner">
+        <img src="../imgs/img02-5.png" alt="">
+        <img id="close" src="../imgs/img01-5.png" alt="">
+    </div>
+
+    <script>
+        // 找关闭图片和div
+        var close = document.getElementById('close');
+        var div = document.getElementById('banner');
+        close.onclick = function(){
+            // 隐藏div 
+            div.style.right = '-122px';
+            // 16:06~16:20
+            // 关闭5秒钟之后  显示内容
+            setTimeout(function(){
+                div.style.right = '0px';
+            },5000);
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <div>
+        <input id="canSubmit" type="checkbox">请阅读并同意
+        <a href="#">协议</a>
+    </div>
+    <button id="btn">提交</button>
+
+    <script src="../js/jquery.min.js"></script>
+    <script>
+        // 当按钮被点击时  检复选框是否被选中
+        // 如果选中 提示ok
+        // 没被选中 提示请阅读并同意协议
+        $('#btn').click(function(){
+            // 判断是否有check属性
+            // var res1 = $('#canSubmit').attr('checked');
+            // console.log(res1);
+            var res2 = $('#canSubmit').prop('checked');
+            res2?alert('OK'):alert('请阅读并同意协议');
+        })
+    </script>
+</body>
+
+</html>

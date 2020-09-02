@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>选择器</title>
+</head>
+<body>
+    <ul>
+        <li id="first">大师兄</li>
+        <li>沙师弟</li>
+        <li>白龙马</li>
+    </ul>
+    <script src="../js/jquery.min.js"></script>
+    <script>
+        $('li:not(#first)').css('color','red');
+
+        // $('li:eq(1)').css('color','red');
+
+        // $('li:even').css('color','red');
+        // $('li:odd').css('color','red');
+
+        // $('li:last').css('color','red');
+        // $('li:first').css('color','red');
+
+
+        // 相邻兄弟选择器  找#first后挨着的li
+        // $('#first+li').css('color','red');
+        // 通用兄弟选择器  找#first后所有的li
+        // $('#first~li').css('color','red');
+        // 层级查找函数   parent parents...
+
+        
+
+
+    </script>
+</body>
+</html>

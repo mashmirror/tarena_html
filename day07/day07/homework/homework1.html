@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <img src="../imgs/bk0-8.jpg" alt="">
+        <img src="../imgs/bk1-8.jpg" alt="">
+        <img src="../imgs/bk2-8.jpg" alt="">
+        <img src="../imgs/bk3-8.jpg" alt="">
+    </div>
+    <script>
+        var imgs = document.getElementsByTagName('img');
+        var arr = getImgArr(imgs.length);
+        console.log(arr);
+        for(var i=0;i<imgs.length;i++){
+            imgs[i].src = arr[i];
+        }
+        function getImgUrl(num){
+            return `../imgs/bk${num}-8.jpg`
+        }
+        function getImgArr(len){
+            var arr = [];
+            while(arr.length<len){
+                var num = parseInt(Math.random()*10);
+                var imgUrl = getImgUrl(num);
+                // 如果imgUrl不在数组中 就添加到数组
+                var strArr = arr.join();
+                if(strArr.indexOf(imgUrl) == -1){
+                    arr.push(imgUrl);
+                }
+            }
+            return arr;
+        }
+        
+    </script>
+</body>
+</html>

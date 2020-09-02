@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="../js/jquery.min.js"></script>
+    <script>
+        $(function () {
+            var arr = [
+                { provName: '北京', provId: 1 },
+                { provName: '上海', provId: 2 },
+                { provName: '深圳', provId: 3 },
+            ]
+            // 使用$.each遍历arr 
+            // 将得到的每一个对象变成option添加到select
+            // {provName:'北京',provId:1}
+            // <option value="1">北京</option>
+            $.each(arr, function (i, o) {
+                $('#prov').append(`<option value="${o.provId}">${o.provName}</option>`)
+            })
+        })
+    </script>
+</head>
+
+<body>
+    地区: <select id="prov">
+        <option value="0">请选择</option>
+        <!-- <option value="1">北京</option>
+        <option value="2">上海</option>
+        <option value="3">深圳</option> -->
+    </select>
+    <script>
+        // 17:00~17:15
+        $(function(){
+            alert('hello')
+        })
+    </script>
+
+</body>
+
+</html>

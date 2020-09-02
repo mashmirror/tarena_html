@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        div{
+            width: 200px;
+            height: 200px;
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+    <button id="btn1">隐藏</button>
+    <button id="btn2">上推</button>
+    <button id="btn3">淡隐</button>
+    <script src="../js/jquery.min.js"></script>
+    <script>
+        $('#btn3').click(function(){
+            if($(this).html() == '淡隐'){
+                $('div').fadeOut(3000,function(){
+                    $('#btn3').html('淡现');
+                });
+            }else{
+                $('div').fadeIn(3000,function(){
+                    $('#btn3').html('淡隐');
+                });
+            }
+        })
+
+
+        $('#btn2').click(function(){
+            if($(this).html() == '上推'){
+                $('div').slideUp(3000,function(){
+                    $('#btn2').html('下拉');
+                });
+            }else{
+                $('div').slideDown(3000,function(){
+                    $('#btn2').html('上推');
+                });
+            }
+        })
+
+        // 14:55~15:10
+        // 如果是隐藏 就隐藏图片然后将按钮改成显示
+        // 如果是显示 就显示图片然后将按钮改成隐藏
+        $('#btn1').click(function(){
+            if($(this).html() == '隐藏'){
+                $('div').hide(3000,function(){
+                    $('#btn1').html('显示');
+                });
+            }else{
+                $('div').show(3000,function(){
+                    $('#btn1').html('隐藏');
+                });
+            }
+        })
+    
+    </script>
+</body>
+</html>

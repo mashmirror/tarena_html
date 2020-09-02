@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <script>
+        window.onload = function () {
+            console.log('页面元素加载完成');
+            var title = document.getElementById('title');
+            console.log(title);
+            title.style = 'color: red';
+        }
+    </script>
+</head>
+
+<body>
+    <h1 id="title">
+        hello world
+    </h1>
+
+    <script>
+        // 14:50~15:05
+        // 页面只加载完成一次 window.onload只有一个生效
+        // 后面的会覆盖前面的代码
+        window.onload = function () {
+            console.log('页面元素加载完成');
+            var title = document.getElementById('title');
+            console.log(title);
+            title.style = 'color: blue';
+        }
+    </script>
+
+
+    <script>
+        // 1.查找页面元素
+        // id  class  tagName
+        // 2.操作页面元素
+        //    操作页面元素内容
+        //    innerText innerHTML value
+        //    操作页面元素属性
+        //    get set remove
+        //    操作页面元素样式
+        //    id/class    style
+
+        // 3.事件
+        //    <element onclick="">
+        //    obj.onclick = function(){}
+
+
+
+        // var title = document.getElementById('title');
+        // title.style = 'color: red';
+        // console.log(title.style);
+        // title.style.backgroundColor = 'green';
+
+
+        // title.id
+        // title.id = 'xxx'
+        // title.id = '';
+        // title.className = 'item';
+        // title.getAttribute();
+        // title.setAttribute();
+        // title.removeAttribute();
+
+    </script>
+</body>
+
+</html>

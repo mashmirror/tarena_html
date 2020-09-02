@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div>item1</div>
+    <div>item2</div>
+    <div>item3</div>
+    <div>item4</div>
+    <div>item5</div>
+    <script src="../js/jquery.min.js"></script>
+    <script>
+        $('div').each(function(i,element){
+            $(element).click(function(){
+                alert(`这是第${i+1}个元素`);
+            })
+        })
+
+        var arr = [1,2,3,4,5];
+        $.each(arr,function(i,o){
+            console.log(`索引值${i},数据${o}`)
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="key">
+    <button id="btn">click me</button>
+    <h1 id="show">......</h1>
+    <script src="../js/jquery.min.js"></script>
+    <script>
+        // 当用户修改文本框内容后
+        // change() 当控件的值发生改变时触发
+        // 在页面显示文本框的内容
+        // 休息+练习11:03~11:20
+        $('#key').change(function(){
+            $('#show').html($(this).val());
+        })
+
+
+        // 当按钮被点击时 
+        // 获取用户在文本框输入的内容
+        // 放在h1中显示
+        $('#btn').click(function(){
+            $('#show').html($('#key').val());
+        })
+    </script>
+</body>
+</html>

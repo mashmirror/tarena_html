@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        ul,
+        body {
+            /* 清除小圆点 */
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        li {
+            /* 让块元素水平排列 浮动 */
+            float: left;
+        }
+
+        .first {
+            color: #666;
+            margin: 10px;
+        }
+
+        .item {
+            /* display: none; */
+            /* 调整元素和其他元素的距离 外边距 */
+            margin: 10px 15px;
+            /* 调整内容和边框的距离 内边距 */
+            padding: 0 5px;
+        }
+
+        .active {
+            background-color: red;
+            color: #fff;
+        }
+
+        /* 鼠标移动到li中变成红底白字 */
+        .item:hover {
+            background-color: red;
+            color: #fff;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>css样式练习</h1>
+    <ul>
+        <li class="first">难度:</li>
+        <li class="item ">全部</li>
+        <li class="item">初级</li>
+        <li class="item active">中级</li>
+        <li class="item ">高级</li>
+    </ul>
+    <script src="../js/jquery.min.js"></script>
+    <script>
+        // $('h1').css('text-align','center').css('color','red').css('font-size','40px');
+
+        $('h1').css({
+            'text-align':'center',
+            'color':'red',
+            'font-size':'40px'
+        })
+
+        // day06 exercise1
+        // JQ版本
+        // 当.item被单击时 为当前元素添加active
+        // 为其余的兄弟元素移除active
+        $('.item').click(function(){
+            $(this).toggleClass('active');
+            // $(this).addClass('active').siblings().removeClass('active');
+        })
+
+
+
+        // JS 版本
+        // var items = document.getElementsByClassName('item');
+        // for (var i = 0; i < 4; i++) {
+        //     items[i].onclick = function () {
+        //         init(items);
+        //         this.setAttribute('class','active item');
+        //     }
+        // }
+        // function init(ele){
+        //     for(var i=0;i<ele.length;i++){
+        //         ele[i].setAttribute('class','item')
+        //     }
+        // }
+    </script>
+</body>
+
+</html>

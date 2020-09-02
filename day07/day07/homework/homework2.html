@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        #fader{
+            width: 739px;
+            height: 419px;
+            position: relative;
+        }
+        #fader .item{
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            /* 不透明度  0(透明)~1(不透明) */
+            opacity: 0;
+            transition: all 1s;
+        }
+        #fader .item.active{
+            opacity: 1;
+        }
+
+        #ll,#rr{
+            position: absolute;
+            top:50%;
+            margin-top:-20px;
+        }
+        #rr{
+            right: 0;
+        }
+    </style>
+</head>
+<body>
+    <div id="fader">
+        <img class="item active" src="../imgs/gm1-6.jpg" alt="">
+        <img class="item" src="../imgs/gm2-6.jpg" alt="">
+        <img class="item" src="../imgs/gm3-6.jpg" alt="">
+        <img class="item" src="../imgs/gm4-6.jpg" alt="">
+        <img class="item" src="../imgs/gm5-6.jpg" alt="">
+        <div>
+            <img id="ll" src="../imgs/l1-6.png" alt="">
+            <img id="rr" src="../imgs/r1-6.png" alt="">
+        </div>
+    </div>
+
+    <script>
+        // 查找页面元素
+        var imgs = document.getElementsByClassName('item');
+        var ll = document.getElementById('ll');
+        var rr = document.getElementById('rr');
+        var i = 0;//默认第一张图片
+        // 向右侧切换图片
+        rr.onclick = function(){
+            // 找到当前的图片对象 清除class active
+            imgs[i].className = 'item';
+            // 找到下一个图片对象 添加class active
+            // 0 1 2 3 4 0 1 2 3...
+            i++;
+            if(i==5){
+                i=0;//最后一张图片再向右是第一张图
+            }
+            imgs[i].className = 'item active';
+        }
+        // 17:14~17:30
+        // 向左
+        ll.onclick = function(){
+            imgs[i].className = 'item';
+            i--;
+            if(i==-1){
+                i = imgs.length-1;//最后一张图
+            }
+            imgs[i].className = 'item active';
+        }
+
+        // 每隔1.5s  自动向右切换图片
+        var timer = setInterval(rr.onclick,1500);
+        // 当用户操作图片内容时 停止自动切换
+        // 当用户不操作内容时  启动自动切换
+        // 为外层父元素添加鼠标事件
+        var fader = document.getElementById('fader');
+        // 鼠标悬停时停止
+        fader.onmouseover = function(){
+            clearInterval(timer);
+        }
+        // 鼠标移出元素时启动
+        fader.onmouseout = function(){
+            timer = setInterval(rr.onclick,1500);
+        }
+    </script>
+</body>
+</html>

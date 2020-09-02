@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div id="d1"></div>
+
+    <!-- 引入外部文件jquery 放在上方 -->
+    <script src="../js/jquery.min.js"></script>
+    <script>
+        // 原生JS对象 使用原生JS的方法和属性
+        // innerHTML  getAttribute()  onclick
+        var d1 = document.getElementById('d1');
+
+        // jQuery对象 使用jQuery提供的方法和属性
+        var $d1 = $('#d1');
+        console.log($d1);
+        $d1.html('hello world');
+        // 10:00~10:15
+        // jq-->js
+        console.log($d1[0]);
+        // js-->jq
+        console.log($(d1));
+
+        $d1[0].onclick = function(){
+            alert('hello')
+        }
+
+
+
+        // function $$(id){
+        //    return document.getElementById(id);
+        // }
+        // $$('d1').innerHTML = 'hello world';
+    </script>
+</body>
+</html>

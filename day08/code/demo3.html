@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>页面元素创建添加</title>
+</head>
+<body>
+    
+    <hr>
+    <script src="../js/jquery.min.js"></script>
+    <script>
+        // var $html = $('<h1></h1>');
+        // $html.html('这是动态生成的标签').css('color','red').attr('id','title');
+        // console.log($html);
+
+        // var $html = $('<h1 id="title" style="color: red">这是动态生成的标签</h1>');
+
+        // $('body').append($html);
+        // $('body').prepend($html);
+        $('body').html('<h1 id="title" style="color: red">这是动态生成的标签</h1>');
+
+        $('hr').after('<h1 id="title" style="color: red">这是动态生成的标签</h1>')
+
+        $('hr').remove();
+    </script>
+</body>
+</html>

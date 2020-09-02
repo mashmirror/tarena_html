@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="title">
+        欢迎QTX
+    </h1>
+    <script>
+        // 放在函数中使用
+        // location.reload();
+
+        //获取地址栏中携带的数据放在页面显示
+        var str = location.href;
+        console.log(str);
+        // 根据?分割字符串 
+        // 前面一部分是地址 后面一部分是数据
+        var data = str.split('?')[1];
+        console.log(data);
+        // 根据=分割
+        // 前部分是键 后部分是值
+        var uname = data.split('=')[1];
+        // 将用户名放在页面h1#titlt 显示
+        var title = document.getElementById('title');
+        title.innerHTML = `欢迎${uname}`;
+    </script>
+</body>
+</html>
