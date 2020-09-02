@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        
+        body{
+            margin: 0px;
+        }
+        .shadow{
+            position:absolute;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(150,150,150,0.5);
+            z-index: 999;
+        }
+        .model{
+            width: 240px;
+            height: 400px;
+            background-color: white;
+            border-radius: 5px;
+
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            margin: -200px 0 0 -120px ;
+        }
+        .model>span{
+            font-size: 20px;
+            color: #666;
+            position:absolute;
+            right: 15px;
+            top: 15px;
+            cursor: pointer;
+        }
+    </style>
+    <script src="../js/jquery.min.js">
+    </script>
+    <script>
+        $(function(){
+            $("#btn").click(function(){
+                $(".shadow").show()
+            })
+            $('.model>span').click(function(){
+                $(".shadow").hide()
+            })
+        })
+    </script>
+</head>
+<body>
+    <!-- 半透明灰色背景 遮罩层 -->
+    <div class="shadow" style="display: none;">
+        <!-- 对话框 模态框 -->
+        <div class="model">
+            <span >x</span>
+        </div>
+    </div>
+    <button id ="btn">注册</button>
+</body>
+</html>

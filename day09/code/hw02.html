@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../../bootstrap-3.3.7-dist/css/bootstrap.css">
+</head>
+<body>
+    <select name="" id="prov">
+        <option value="">请选择</option>
+    </select>
+    <select name="" id="city">
+        <option value="">请选择</option>
+    </select>
+    <select name="" id="area">
+        <option value="">请选择</option>
+    </select>
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/data.js"></script>
+    <script>
+        $.each(data,function(i,o){
+            $('#prov').append(`<option value="${o.provId}">${o.provname}</option>`);
+        })
+
+
+        $('#prov').change(function(){
+            $.each(data,function(i,o){
+                if (o.provId ==$('#prov').val() ){
+                    $('#city').html('<option value="">请选择</option>')
+                    $('#area').html('<option value="">请选择</option>')
+                    $.each(o. citys,function(i,o){
+                        $('#city').append(`<option value="${o.cityId}">${o.cityname}</option>`);
+                    })
+                }
+            })
+        })
+
+
+        $('#city').change(function(){
+            $.each(data,function(i,o){
+                    $.each(o. citys,function(i,o){
+                        if (o.cityId == $('#city').val()){
+                            $('#area').html('<option value="">请选择</option>')
+                            $.each(o.areas,function(i,o){
+                                $('#area').append(`<option value="${o.areaId}">${o.areaname}</option>`);
+                            })
+                        }
+                    })
+                })
+        })
+        
+    </script>
+</body>
+</html>
