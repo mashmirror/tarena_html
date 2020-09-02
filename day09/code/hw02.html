@@ -25,10 +25,10 @@
 
 
         $('#prov').change(function(){
+            $('#city').html('<option value="">请选择</option>')
+            $('#area').html('<option value="">请选择</option>')
             $.each(data,function(i,o){
                 if (o.provId ==$('#prov').val() ){
-                    $('#city').html('<option value="">请选择</option>')
-                    $('#area').html('<option value="">请选择</option>')
                     $.each(o. citys,function(i,o){
                         $('#city').append(`<option value="${o.cityId}">${o.cityname}</option>`);
                     })
@@ -38,6 +38,7 @@
 
 
         $('#city').change(function(){
+            $('#area').html('<option value="">请选择</option>')
             $.each(data,function(i,o){
                     $.each(o. citys,function(i,o){
                         if (o.cityId == $('#city').val()){
