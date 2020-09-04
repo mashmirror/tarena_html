@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <select name="" id="city">
+        <option value="">请选择</option>
+    </select>
+    <select name="" id="area">
+        <option value="">请选择</option>
+    </select>
+    <script src="../js/jquery.min.js"></script>
+    <script>
+        // 11:08~11:25
+        // 杭州    杭州一区 杭州二区
+        // 石家庄  石家庄一区  石家庄二区
+        var data = [
+            {
+                'cityName': '杭州',
+                'cityId': '101',
+                'areas': [
+                    {
+                        'areaName': '杭州一区',
+                        'areaId': '1011',
+                    },
+                    {
+                        'areaName': '杭州二区',
+                        'areaId': '1012',
+                    }
+                ]
+            },
+            {
+                'cityName': '石家庄',
+                'cityId': '201',
+                'areas': [
+                    {
+                        'areaName': '石家庄一区',
+                        'areaId': '2011',
+                    },
+                    {
+                        'areaName': '石家庄二区',
+                        'areaId': '2012',
+                    }
+                ]
+            }
+        ]
+
+        // 显示城市
+        // <option value="101">杭州</option>
+        $.each(data,function(i,o){
+            // console.log(o);
+            $('#city').append(`<option value="${o.cityId}">${o.cityName}</option>`);
+        })
+
+        // 选择城市后加载对应的地区
+        // $('#city').click(function(){
+        //     console.log('hello world')
+        // });
+        $('#city').change(function(){
+            // 获取下拉菜单的value
+            // 遍历数据检查所有城市的cityId
+            // 如果城市的cityId == value说明找到用户选择的城市  然后获取城市对应的地区 o.areas
+            $.each(data,function(i,o){
+                if(o.cityId == $('#city').val()){
+                    // 当前的城市
+                    // 当前城市对应的地区o.areas
+                    // 将地区显示到地区下拉菜单
+                    // 遍历地区数组 获取地区对象 添加到页面
+                    // 初始化地区下拉菜单
+                    $('#area').html('<option value="">请选择</option>')
+                    $.each(o.areas,function(i,a){
+                        $('#area').append(`<option value="${a.areaId}">${a.areaName}</option>`)
+                    })
+                }
+            })
+        
+        });
+    </script>
+
+</body>
+
+</html>

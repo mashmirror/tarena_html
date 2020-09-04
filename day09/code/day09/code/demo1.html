@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <!-- 引入外部样式文件 -->
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+
+    <!-- 引入外部JS文件 -->
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+
+
+    <style>
+        .container,
+        .container-fluid {
+            /* height: 3000px; */
+            background-color: lightcyan;
+        }
+
+        .row>div {
+            /* height: 30px; */
+            border: 1px solid red;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <nav class="navbar navbar-default">
+            <div class="container-fluid">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                        data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#">Brand</a>
+                </div>
+
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    
+                    <ul class="nav navbar-nav">
+                        <!-- 超链接 -->
+                        <li class="active"><a href="#">Link <span class="sr-only">(current)</span></a></li>
+                        <li><a href="#">Link</a></li>
+
+                        <!-- 下拉菜单 -->
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
+                                aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">Action</a></li>
+                                <li><a href="#">Another action</a></li>
+                                <li><a href="#">Something else here</a></li>
+                                <li role="separator" class="divider"></li>
+                                <li><a href="#">Separated link</a></li>
+                                <li role="separator" class="divider"></li>
+                                <li><a href="#">One more separated link</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <!-- 搜索 -->
+                    <form class="navbar-form navbar-left" role="search">
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Search">
+                        </div>
+                        <button type="submit" class="btn btn-default">Submit</button>
+                    </form>
+                    <!-- 右侧超链接和下拉菜单 -->
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="#">Link</a></li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
+                                aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">Action</a></li>
+                                <li><a href="#">Another action</a></li>
+                                <li><a href="#">Something else here</a></li>
+                                <li role="separator" class="divider"></li>
+                                <li><a href="#">Separated link</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div><!-- /.navbar-collapse -->
+            </div><!-- /.container-fluid -->
+        </nav>
+
+        <h1><mark>bootstrap</mark>样式演示
+            <small>2020-09-02</small>
+        </h1>
+        <blockquote class="blockquote-reverse">
+            <p>
+                表情包多的人 没对象
+            </p>
+            <footer>
+                <cite title="Source Title">
+                    鲁迅
+                </cite>
+            </footer>
+        </blockquote>
+
+        <dl class="dl-horizontal">
+            <dt>老王的一天</dt>
+            <dd>
+                xxxxx
+            </dd>
+            <dt>老王的幸福生活</dt>
+            <dd>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi minus tempora inventore odit. Architecto
+                ducimus quia quasi totam omnis quo, laudantium dicta reiciendis sequi pariatur libero, deserunt ut
+                suscipit vel.
+            </dd>
+        </dl>
+
+
+        <ul class="list-inline">
+            <li>全部</li>
+            <li>初级</li>
+            <li>中级</li>
+            <li>高级</li>
+        </ul>
+
+
+        <ul class="list-unstyled">
+            <li>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Facere debitis obcaecati modi rem, tempora
+                maxime quae laborum.</li>
+            <li>Obcaecati eveniet, cum numquam illum facilis explicabo delectus ex, eum cupiditate officiis aperiam.
+            </li>
+        </ul>
+
+
+
+        <!-- p*3>lorem -->
+        <p class="lead text-right">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facere eaque reprehenderit
+            ad! Dolore repellat eveniet illo harum. Officia, exercitationem. Harum quos eaque sunt a temporibus, ad illo
+            nam incidunt tempore.</p>
+        <p>Ducimus ullam eius atque! Soluta placeat aspernatur, dolores ipsa mollitia blanditiis accusamus error ab
+            exercitationem, eius corporis nemo tempore molestias natus possimus deserunt unde fuga eos qui optio enim
+            suscipit?</p>
+        <p>Eveniet voluptate aliquid sit excepturi quaerat, iure incidunt in? Aperiam fugiat dicta nesciunt tempore.
+            Explicabo repellat totam maxime rem ex enim sunt consequuntur cum sapiente provident! Sequi nostrum
+            perspiciatis adipisci?</p>
+
+
+
+        <div class="row">
+            <!-- lg md sm xs -->
+            <div class="col-sm-1"></div>
+            <div class="col-sm-1"></div>
+            <div class="col-sm-1"></div>
+            <div class="col-sm-1"></div>
+            <div class="col-sm-1"></div>
+            <div class="col-sm-1"></div>
+            <div class="col-sm-1"></div>
+            <div class="col-sm-1"></div>
+            <div class="col-sm-1"></div>
+            <div class="col-sm-1"></div>
+            <div class="col-sm-1"></div>
+            <div class="col-sm-1"></div>
+        </div>
+        <!-- 一行2个元素 -->
+        <div class="row">
+            <div class="col-sm-7">
+                <img class="img-responsive img-thumbnail" src="gm1-6.jpg" alt="">
+            </div>
+            <div class="col-sm-5">
+                <div class="form-group">
+                    <label for="uname">
+                        姓名
+                    </label>
+                    <input class="form-control" type="text" id="uname">
+                </div>
+                <div class="form-group">
+                    <label for="pwd">
+                        密码
+                    </label>
+                    <input class="form-control" type="password" id="pwd">
+                </div>
+                <div class="checkbox">
+                    <label>
+                        <input type="checkbox"> Check me out
+                    </label>
+                </div>
+                <button class="btn btn-info">
+                    submit
+                    <span class="glyphicon glyphicon-heart"></span>
+                </button>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-9">
+                <table class="table table-bordered">
+                    <tr class="warning">
+                        <td>姓名</td>
+                        <td>年龄</td>
+                    </tr>
+                    <tr class="success">
+                        <td>qtx</td>
+                        <td>18</td>
+                    </tr>
+                    <tr class="danger">
+                        <td>maria</td>
+                        <td>18</td>
+                    </tr>
+                </table>
+
+
+            </div>
+            <div class="col-sm-3"></div>
+        </div>
+        <!-- 一行3个元素 -->
+        <!-- 15:56~16:10 -->
+        <div class="row">
+            <div class="col-sm-4 col-xs-6">左</div>
+            <div class="col-sm-4 hidden-xs">中</div>
+            <div class="col-sm-4 col-xs-6">右</div>
+        </div>
+        <div class="row">
+            <div class="col-sm-3 col-xs-6">img1</div>
+            <div class="col-sm-3 col-xs-6">img2</div>
+            <div class="col-sm-3 col-xs-6">img3</div>
+            <div class="col-sm-3 col-xs-6">img4</div>
+        </div>
+
+    </div>
+
+
+
+    <!-- 14:54~15:10 -->
+    <!-- <table class="table table-bordered">
+        <tr>
+            <td>姓名</td>
+            <td>班级</td>
+            <td>年龄</td>
+            <td>地址</td>
+        </tr>
+        <tr>
+            <td>qtx</td>
+            <td>2008</td>
+            <td>18</td>
+            <td>beijing</td>
+        </tr>
+        <tr>
+            <td>maira</td>
+            <td>2007</td>
+            <td>18</td>
+            <td>beijing</td>
+        </tr>
+    </table> -->
+</body>
+
+</html>

@@ -1,0 +1,17 @@
+nav{
+    /* border: 1px solid red; */
+    box-shadow: 1px 0px 2px 2px gray;
+    height: 100px;
+    position: relative;
+    top: -70px;
+    background: white;
+}
+nav>div.row{
+    margin: 20px;
+}
+.moveleft{
+    margin-left: -10px;
+}
+.select-col{
+    cursor: pointer;
+}

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <select name="" id="prov">
+        <option value="0">请选择</option>
+    </select>
+    <select name="" id="city">
+        <option value="0">请选择</option>
+    </select>
+    <select name="" id="area">
+        <option value="0">请选择</option>
+    </select>
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/data.js"></script>
+    <script>
+        console.log(data);
+        // 11:30~11:45
+        // 省份和城市的二级联动
+        // 打开页面时直接加载省份的内容
+        // 用户选择省份后 加载省份对应的城市
+        $.each(data,function(i,p){
+            $('#prov').append(`<option value="${p.provId}">${p.provname}</option>`)
+        })
+        $('#prov').change(function(){
+            if($('#prov').val() == 0){
+                $('#city').html(`<option value="0">请选择</option>`)
+            }
+            if($('#city').val() == 0){
+                $('#area').html(`<option value="0">请选择</option>`)
+            }
+
+            $.each(data,function(i,p){
+                if(p.provId == $('#prov').val()){
+                    // 初始化城市菜单
+                    $('#city').html('<option value="0">请选择</option>')
+                    $.each(p.citys,function(i,c){
+                        $('#city').append(`<option value="${c.cityId}">${c.cityname}</option>`)
+                    })
+                }
+            })
+        })
+        // 当选择城市之后 加载城市对应的地区
+        // 先判断#prov的值 找到当前省份 获取城市 
+        // 再判断#city的值 找到当前城市 获取地区
+        // 遍历地区数组 获取地区对象 显示到页面
+        $('#city').change(function(){
+            if($('#city').val() == 0){
+                $('#area').html(`<option value="0">请选择</option>`)
+            }
+
+            $.each(data,function(i,p){
+                if(p.provId == $('#prov').val()){
+                    $.each(p.citys,function(i,c){
+                        if(c.cityId == $('#city').val()){
+                            $('#area').html(`<option value="0">请选择</option>`)
+                            $.each(c.areas,function(i,a){
+                                $('#area').append(`<option value="${a.areaId}">${a.areaname}</option>`)
+                            })
+
+                        }
+                    })
+                }
+            })
+        })
+
+
+    </script>
+</body>
+
+</html>
